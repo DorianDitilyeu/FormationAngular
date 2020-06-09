@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientsService } from '../../services/clients.service';
+import { Client } from 'src/app/shared/models/clients';
 
 @Component({
   selector: 'app-page-list-clients',
@@ -8,12 +9,21 @@ import { ClientsService } from '../../services/clients.service';
 })
 export class PageListClientsComponent implements OnInit {
 
+  public collection: Client[];
+  public headers: string[];
+
   constructor(private os: ClientsService) { }
 
   ngOnInit(): void {
     this.os.collection.subscribe((datas) => {
-      console.log(datas);
+      this.collection = datas;
     });
+    this.headers = [
+      "Name",
+      "State",
+      "CA",
+      "Comment"
+    ]
   }
 
 }
