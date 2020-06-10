@@ -1,13 +1,19 @@
 @import 'theme';
 
 .table-light {
-  .state-cancel {
+  .state-cancel{
     background: $color-error;
   }
   .state-option {
     background: $color3;
   }
   .state-confirmed {
+    background: $color-success;
+  }
+  .state-inactive {
+    background: $color-error;
+  }
+  .state-active {
     background: $color-success;
   }
 }

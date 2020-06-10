@@ -10,4 +10,10 @@
   .state-confirmed {
     background: $color-success;
   }
+  .state-inactive {
+    background: $color-error;
+  }
+  .state-active {
+    background: $color-success;
+  }
 }

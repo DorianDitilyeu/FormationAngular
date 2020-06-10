@@ -56,7 +56,7 @@ export class PageListOrdersComponent implements OnInit {
   }
 
   public openPopUp() {
-    console.log("Open popup");
+    console.log("Open popup orders");
   }
 
 }
