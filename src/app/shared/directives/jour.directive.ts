@@ -15,9 +15,9 @@ export class JourDirective implements OnChanges {
 
   private formatClass(jour: number): string {
     if (jour >= 3) {
-      return 'jour-up';
+      return 'state-cancel';
     } else {
-      return 'jour-down';
+      return 'state-confirmed';
     }
   }
 
