@@ -8,8 +8,8 @@ import { Client } from '../../models/clients';
   styleUrls: ['./table-light.component.scss']
 })
 export class TableLightComponent implements OnInit {
-  //@Input() collection: Order[];
-  @Input() collection: Client[];
+  @Input() collection: Order[];
+  //@Input() collection: Client[];
   @Input() headers: string[];
 
   constructor() { }
