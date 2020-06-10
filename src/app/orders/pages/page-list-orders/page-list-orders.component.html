@@ -1,4 +1,4 @@
-<app-table-light *ngIf="collection" [headers]="headers">
+<app-table-dark *ngIf="collection" [headers]="headers">
   <tr *ngFor="let item of collection">
     <td>{{ item.typePresta }}</td>
     <td>{{ item.client }}</td>
@@ -13,4 +13,4 @@
       </select>
     </td>
   </tr>
-</app-table-light>
+</app-table-dark>
