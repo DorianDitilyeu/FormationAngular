@@ -17,3 +17,25 @@
     background: $color-success;
   }
 }
+
+app-template-a {
+  .table-light {
+    .state-option {
+      background: $color1;
+    }
+    .state-active {
+      background: $color1;
+    }
+  }
+}
+
+app-template-b {
+  .table-light {
+    .state-option {
+      background: $color2;
+    }
+    .state-active {
+      background: $color2;
+    }
+  }
+}

@@ -8,6 +8,7 @@ import { JourDirective } from './directives/jour.directive';
 import { TableDarkComponent } from './components/table-dark/table-dark.component';
 import { RouterModule } from '@angular/router';
 import { AffaireDirective } from './directives/affaire.directive';
+import { TemplatesModule } from '../templates/templates.module';
 
 
 
@@ -15,7 +16,8 @@ import { AffaireDirective } from './directives/affaire.directive';
   declarations: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, JourDirective, TableDarkComponent, AffaireDirective],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TemplatesModule
   ],
   exports: [
     BtnComponent,
@@ -24,7 +26,8 @@ import { AffaireDirective } from './directives/affaire.directive';
     TotalPipe,
     StateDirective,
     JourDirective,
-    AffaireDirective
+    AffaireDirective,
+    TemplatesModule
   ]
 })
 export class SharedModule { }
