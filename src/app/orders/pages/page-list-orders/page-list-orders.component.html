@@ -1,4 +1,4 @@
-<app-template-b title="Orders" subtitle="All orders">
+<app-template-c title="Orders" subtitle="All orders">
   <app-table-dark *ngIf="collection$ | async as collection" [headers]="headers">
     <tr *ngFor="let item of collection">
       <td>{{ item.typePresta }}</td>
@@ -27,4 +27,4 @@
     <p>Du texte dans un paragraphe</p>
   </app-text>
 
-</app-template-b>
+</app-template-c>
