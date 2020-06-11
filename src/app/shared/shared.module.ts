@@ -9,6 +9,7 @@ import { TableDarkComponent } from './components/table-dark/table-dark.component
 import { RouterModule } from '@angular/router';
 import { AffaireDirective } from './directives/affaire.directive';
 import { TemplatesModule } from '../templates/templates.module';
+import { TextModule } from '../text/text.module';
 
 
 
@@ -17,7 +18,8 @@ import { TemplatesModule } from '../templates/templates.module';
   imports: [
     CommonModule,
     RouterModule,
-    TemplatesModule
+    TemplatesModule,
+    TextModule
   ],
   exports: [
     BtnComponent,
@@ -27,7 +29,8 @@ import { TemplatesModule } from '../templates/templates.module';
     StateDirective,
     JourDirective,
     AffaireDirective,
-    TemplatesModule
+    TemplatesModule,
+    TextModule
   ]
 })
 export class SharedModule { }
