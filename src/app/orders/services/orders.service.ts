@@ -36,6 +36,7 @@ export class OrdersService {
     return this.http.put<Order>(`${this.urlApi}orders/${item.id}`, item);
    }
 
+   // Change State Order
    public changeState(item: Order, state: StateOrder): Observable<Order> {
     const obj = new Order({...item});
     obj.state = state;
@@ -43,8 +44,10 @@ export class OrdersService {
    }
 
    // add item
+   public add(item: Order): Observable<Order> {
+     return this.http.post<Order>(`${this.urlApi}orders/`, item);
+   }
 
    // delete item
 
-   // change StateOrder
 }
