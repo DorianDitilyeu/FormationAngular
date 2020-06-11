@@ -1,0 +1,36 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" formControlName="name" class="form-control" id="name">
+      <div *ngIf="form.get('name').invalid && form.get('name').touched" class="alert alert-danger">Champs invalide</div>
+    </div>
+
+    <div class="form-group">
+      <label for="tva">tva</label>
+      <input type="text" formControlName="tva" class="form-control" id="tva">
+    </div>
+
+    <div class="form-group">
+      <label for="state">state</label>
+      <select formControlName="state" class="form-control" id="state">
+        <option *ngFor="let state of states" [ngValue]="state">{{ state }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="ca">ca</label>
+      <input type="text" formControlName="ca" class="form-control" id="ca">
+      <div *ngIf="form.get('ca').invalid && form.get('ca').touched" class="alert alert-danger">Champs invalide</div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">comment</label>
+      <textarea type="text" formControlName="comment" class="form-control" id="comment"></textarea>
+    </div>
+
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

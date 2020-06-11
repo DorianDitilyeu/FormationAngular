@@ -23,7 +23,7 @@ export class PageListClientsComponent implements OnInit {
   ngOnInit(): void {
     this.btnRoute = {
       label: "Add a client",
-      route: "client"
+      route: "add"
     };
     this.btnHref = {
       label: "Go to google",

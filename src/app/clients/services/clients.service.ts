@@ -36,6 +36,7 @@ export class ClientsService {
     return this.http.put<Client>(`${this.urlApi}clients/${item.id}`, item);
    }
 
+  // Change State Client
    public changeState(item: Client, state: StateClient): Observable<Client> {
     const obj = new Client({...item});
     obj.state = state;
@@ -43,9 +44,10 @@ export class ClientsService {
    }
 
    // add item
+   public add(item: Client): Observable<Client> {
+    return this.http.post<Client>(`${this.urlApi}clients/`, item);
+  }
 
    // delete item
-
-   // change StateOrder
 
 }

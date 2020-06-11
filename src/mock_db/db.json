@@ -70,6 +70,16 @@
       "client": "fzefzefze",
       "comment": "fzeezezfze",
       "id": 7
+    },
+    {
+      "tjmHT": 500,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": null,
+      "client": null,
+      "comment": null,
+      "id": 8
     }
   ],
   "clients": [
@@ -88,6 +98,14 @@
       "name": "Modis",
       "ca": 120000,
       "comment": "un comment pour client modis"
+    },
+    {
+      "state": "ACTIVE",
+      "tva": 20,
+      "id": 3,
+      "name": "Alfea Consulting",
+      "ca": "5000000",
+      "comment": "Test"
     }
   ]
 }
