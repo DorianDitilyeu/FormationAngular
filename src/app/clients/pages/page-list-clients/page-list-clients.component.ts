@@ -17,6 +17,7 @@ export class PageListClientsComponent implements OnInit {
   public btnRoute: Btn;
   public btnHref: Btn;
   public btnAction: Btn;
+  public btnDelete: Btn;
 
   constructor(private os: ClientsService) { }
 
@@ -32,7 +33,11 @@ export class PageListClientsComponent implements OnInit {
     this.btnAction = {
       label: "Open dialogue",
       action: true
-    }
+    };
+    this.btnDelete = {
+      label: "Delete Client",
+      delete: true
+    };
 
     this.os.collection.subscribe((datas) => {
       this.collection = datas;
@@ -41,7 +46,8 @@ export class PageListClientsComponent implements OnInit {
       "Name",
       "State",
       "CA",
-      "Comment"
+      "Comment",
+      "Action"
     ]
   }
 
@@ -54,6 +60,11 @@ export class PageListClientsComponent implements OnInit {
 
   public openPopUp() {
     console.log("Open popup clients");
+  }
+
+  public delete(item: Client) {
+    console.log(event);
+    this.os.delete(item).subscribe((result) =>{});
   }
 
 }

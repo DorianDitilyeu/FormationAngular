@@ -3,4 +3,5 @@ export interface Btn {
   route?: string;
   href?: string;
   action?: boolean;
+  delete?: boolean;
 }

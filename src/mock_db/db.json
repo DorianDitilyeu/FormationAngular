@@ -98,14 +98,6 @@
       "name": "Modis",
       "ca": 120000,
       "comment": "un comment pour client modis"
-    },
-    {
-      "state": "ACTIVE",
-      "tva": 20,
-      "id": 3,
-      "name": "Alfea Consulting",
-      "ca": "5000000",
-      "comment": "Test"
     }
   ]
 }

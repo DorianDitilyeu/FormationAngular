@@ -10,6 +10,7 @@
       <!--<td>{{ item.state }}</td>-->
       <td [appAffaire]="item.ca">{{ item.ca | currency: 'EUR'}}</td>
       <td>{{ item.comment }}</td>
+      <td><app-btn [label]="btnDelete.label" [action]="btnDelete.delete" (clicked)="delete(item)"></app-btn></td>
     </tr>
   </app-table-dark>
 
