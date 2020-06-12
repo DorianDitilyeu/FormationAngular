@@ -3,6 +3,8 @@ import { ClientsService } from '../../services/clients.service';
 import { Client } from 'src/app/shared/models/clients';
 import { StateClient } from 'src/app/shared/enums/state-client.enum';
 import { Btn } from 'src/app/shared/interfaces/btn-i';
+import { Subscription, Subject } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-list-clients',
@@ -11,7 +13,7 @@ import { Btn } from 'src/app/shared/interfaces/btn-i';
 })
 export class PageListClientsComponent implements OnInit {
 
-  public collection: Client[];
+  public collection$: Subject<Client[]> = new Subject();
   public headers: string[];
   public states = Object.values(StateClient);
   public btnRoute: Btn;
@@ -19,7 +21,7 @@ export class PageListClientsComponent implements OnInit {
   public btnAction: Btn;
   public btnDelete: Btn;
 
-  constructor(private os: ClientsService) { }
+  constructor(private os: ClientsService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.btnRoute = {
@@ -40,7 +42,7 @@ export class PageListClientsComponent implements OnInit {
     };
 
     this.os.collection.subscribe((datas) => {
-      this.collection = datas;
+      this.collection$.next(datas);
     });
     this.headers = [
       "Name",
@@ -63,8 +65,11 @@ export class PageListClientsComponent implements OnInit {
   }
 
   public delete(item: Client) {
-    console.log(event);
-    this.os.delete(item).subscribe((result) =>{});
+    this.os.delete(item).subscribe((result) =>{
+      this.os.collection.subscribe((col) => {
+        this.collection$.next(col);
+      })
+    });
   }
 
 }

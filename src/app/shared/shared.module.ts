@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { AffaireDirective } from './directives/affaire.directive';
 import { TemplatesModule } from '../templates/templates.module';
 import { TextModule } from '../text/text.module';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -19,7 +20,8 @@ import { TextModule } from '../text/text.module';
     CommonModule,
     RouterModule,
     TemplatesModule,
-    TextModule
+    TextModule,
+    IconsModule
   ],
   exports: [
     BtnComponent,
